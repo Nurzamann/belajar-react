@@ -1,10 +1,10 @@
-type ProfileCardPops = {
+type ProfileCardProps = {
   name?: string;
   year: number;
   job?: string;
 };
 
-const ProfileCard = (props: ProfileCardPops) => {
+const ProfileCard = (props: ProfileCardProps) => {
   const { name ="Anonymous", year, job } = props;
   return (
     <div className="card">

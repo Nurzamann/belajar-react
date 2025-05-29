@@ -15,38 +15,39 @@ const teachers: Teacher[] = [
     job: "Dosen",
     name: "Pak Dika",
     year: 1995,
-    id: 1
+    id: 1,
   },
   {
     name: "Theo",
     job: "Creator",
     year: 2000,
-    id: 2
+    id: 2,
   },
   {
     name: "pak eko",
     job: "tech lead",
     year: 2000,
-    id: 3
+    id: 3,
   },
   {
     name: "Nurzaman",
     job: "pengangguran",
     year: 2000,
-    id: 4
+    id: 4,
   },
 ];
 
 // component
 function App() {
   return (
-    <div style={{
-      padding: "16px 48px",
-
-    }}>
+    <div
+      style={{
+        padding: "16px 48px",
+      }}
+    >
       <Header />
 
-      {/* <div style={{ gap: "8px", display: "flex", flexDirection: "row" }}>
+      <div style={{ gap: "8px", display: "flex", flexDirection: "row" }}>
         {teachers.map((teachers) => {
           return (
             <ProfileCard
@@ -57,7 +58,7 @@ function App() {
             />
           );
         })}
-      </div> */}
+      </div>
 
       <Counter />
       <Welcome />
