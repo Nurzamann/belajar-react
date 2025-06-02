@@ -9,7 +9,7 @@ type Mahasiswa = {
     instagram?: string;
     linkedin?: string;
   };
-  skills: string[];
+  hobis: string[];
   id: number;
 };
 
@@ -23,7 +23,7 @@ const mahasiswa: Mahasiswa[] = [
       linkedin: "https://linkedin.com/in/nurzaman",
       instagram: "https://instagram.com/nurzaman",
     },
-    skills: ["React", "TypeScript", "UI/UX"],
+    hobis: ["Gaming", "Sepak Bola", "Baca Buku"],
     id: 1,
   },
   {
@@ -34,7 +34,7 @@ const mahasiswa: Mahasiswa[] = [
     link: {
       linkedin: "https://linkedin.com/in/zahra",
     },
-    skills: ["Python", "Figma"],
+    hobis: ["Menggambar", "Baca Buku"],
     id: 2,
   },
   {
@@ -42,7 +42,7 @@ const mahasiswa: Mahasiswa[] = [
     tahun: 1998,
     jurusan: "Teknik Komputer",
     status: "Cuti",
-    skills: ["Linux", "Docker", "Networking"],
+    hobis: ["Ngopi", "Maen ML", "Tidur"],
     id: 3,
   },
 ];
