@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router";
 import TermsPage from "./pages/TermsPage";
 import HomePages from "./pages/HomePages";
 import NotFoundPage from "./pages/NotFoundPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 
 type Teacher = {
   name: string;
@@ -48,6 +49,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePages />}></Route>
         <Route path="/terms" element={<TermsPage />} />
+
+        {/* Dynamic Router */}
+        <Route path="/product/:productSlug" element={<ProductDetailPage />} />
+
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
