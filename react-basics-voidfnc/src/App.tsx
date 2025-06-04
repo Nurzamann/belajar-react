@@ -5,6 +5,7 @@ import Counter from "./components/Counter";
 import { Routes, Route } from "react-router";
 import TermsPage from "./pages/TermsPage";
 import HomePages from "./pages/HomePages";
+import NotFoundPage from "./pages/NotFoundPage";
 
 type Teacher = {
   name: string;
@@ -47,6 +48,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePages />}></Route>
         <Route path="/terms" element={<TermsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
