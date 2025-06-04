@@ -2,6 +2,7 @@ import Welcome from "./components/Welcome";
 import Header from "./components/Header";
 import ProfileCard from "./components/ProfileCard";
 import Counter from "./components/Counter";
+import { Routes, Route } from "react-router";
 
 type Teacher = {
   name: string;
@@ -40,29 +41,11 @@ const teachers: Teacher[] = [
 // component
 function App() {
   return (
-    <div
-      style={{
-        padding: "16px 48px",
-      }}
-    >
-      <Header />
-
-      <div style={{ gap: "8px", display: "flex", flexDirection: "row" }}>
-        {teachers.map((teachers) => {
-          return (
-            <ProfileCard
-              name={teachers.name}
-              year={teachers.year}
-              job={teachers.job}
-              key={teachers.id}
-            />
-          );
-        })}
-      </div>
-
-      <Counter />
-      <Welcome />
-    </div>
+    <>
+      <Routes>
+        <Route />
+      </Routes>
+    </>
   );
 }
 

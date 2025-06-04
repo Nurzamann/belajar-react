@@ -1,59 +1,51 @@
-import MahasiswaCard from "./components/MahasiswaCard";
+import ProfileCard from "./components/ProfileCard";
 
-type Mahasiswa = {
-  nama: string;
+type Profile = {
+  name: string;
+  lahir: string;
   tahun: number;
-  jurusan: string;
-  status?: "Aktif" | "Cuti" | "Lulus";
-  link?: {
-    instagram?: string;
-    linkedin?: string;
-  };
+  alamat: string;
+  tlp: number;
   hobis: string[];
   id: number;
 };
 
-const mahasiswa: Mahasiswa[] = [
+const profile: Profile[] = [
   {
-    nama: "Nurzaman",
+    name: "Nurzaman",
+    lahir: "Jakarta",
     tahun: 2000,
-    jurusan: "Teknik Informatika",
-    status: "Lulus",
-    link: {
-      linkedin: "https://linkedin.com/in/nurzaman",
-      instagram: "https://instagram.com/nurzaman",
-    },
-    hobis: ["Gaming", "Sepak Bola", "Baca Buku"],
+    alamat: "Jl. H. Kodja",
+    tlp: 6289661498035,
+    hobis: ["Ngopi", "ngoding", "Nonton Anime"],
     id: 1,
   },
   {
-    nama: "Zahra",
-    tahun: 1999,
-    jurusan: "Sistem Informasi",
-    status: "Aktif",
-    link: {
-      linkedin: "https://linkedin.com/in/zahra",
-    },
-    hobis: ["Menggambar", "Baca Buku"],
+    name: "Miftahul Zanna",
+    lahir: "Jakarta",
+    tahun: 2001,
+    alamat: "Jl. Pancoran",
+    tlp: 6282983298432,
+    hobis: ["Ngedrakor", "Baca Buku", "Ngajar"],
     id: 2,
-  },
-  {
-    nama: "Dito",
-    tahun: 1998,
-    jurusan: "Teknik Komputer",
-    status: "Cuti",
-    hobis: ["Ngopi", "Maen ML", "Tidur"],
-    id: 3,
   },
 ];
 
 function App() {
   return (
-    <div style={{ padding: "32px" }}>
-      <h1>Daftar Mahasiswa</h1>
-      <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
-        {mahasiswa.map((mhs) => (
-          <MahasiswaCard key={mhs.id} {...mhs} />
+    <div>
+      <h1>Daftar Profile</h1>
+      <div>
+        {profile.map((p) => (
+          <ProfileCard
+            key={p.id}
+            name={p.name}
+            lahir={p.lahir}
+            tahun={p.tahun}
+            alamat={p.alamat}
+            tlp={p.tlp}
+            hobis={p.hobis}
+          />
         ))}
       </div>
     </div>
