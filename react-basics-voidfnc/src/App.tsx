@@ -4,6 +4,7 @@ import ProfileCard from "./components/ProfileCard";
 import Counter from "./components/Counter";
 import { Routes, Route } from "react-router";
 import TermsPage from "./pages/TermsPage";
+import HomePages from "./pages/HomePages";
 
 type Teacher = {
   name: string;
@@ -44,6 +45,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<HomePages />}></Route>
         <Route path="/terms" element={<TermsPage />} />
       </Routes>
     </>
