@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import ProfileCard from "./components/ProfileCard";
 import Counter from "./components/Counter";
 import { Routes, Route } from "react-router";
+import TermsPage from "./pages/TermsPage";
 
 type Teacher = {
   name: string;
@@ -43,7 +44,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route />
+        <Route path="/terms" element={<TermsPage />} />
       </Routes>
     </>
   );
