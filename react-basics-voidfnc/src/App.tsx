@@ -51,7 +51,8 @@ function App() {
         <Route path="/terms" element={<TermsPage />} />
 
         {/* Dynamic Router */}
-        <Route path="/product/:productSlug" element={<ProductDetailPage />} />
+        <Route path="/product/:slug" element={<ProductDetailPage />} />
+        {/* localhost:5173/product/kaos-oblong */}
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
