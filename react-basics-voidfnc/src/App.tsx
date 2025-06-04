@@ -7,6 +7,7 @@ import TermsPage from "./pages/TermsPage";
 import HomePages from "./pages/HomePages";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import ProductListPage from "./pages/ProductListPage";
 
 type Teacher = {
   name: string;
@@ -50,7 +51,10 @@ function App() {
         <Route path="/" element={<HomePages />}></Route>
         <Route path="/terms" element={<TermsPage />} />
 
-        {/* Dynamic Router */}
+        <Route path="/product-list" element={<ProductListPage />} />
+
+
+        {/* Dynamic Route */}
         <Route path="/product/:slug" element={<ProductDetailPage />} />
         {/* localhost:5173/product/kaos-oblong */}
 
